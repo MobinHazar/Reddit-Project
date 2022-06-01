@@ -1,21 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:reddit/Screens/Welcome/welcome_screen.dart';
+import 'package:reddit/constants.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
+  static const String _title = 'Sample App';
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Reddit',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home:
+      debugShowCheckedModeBanner: false,
+        title: 'Reddit',
+        theme: ThemeData(
+          primaryColor: kPrimaryColor,
+          scaffoldBackgroundColor: Colors.white,
+        ),
+        home: const WelcomeScreen(),
     );
   }
 }
