@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import '../../components/rounded_button.dart';
-import '../../constants.dart';
 import '../Login/login_screen.dart';
 import '../Signup/signup_screen.dart';
 import 'Background.dart';
-import 'package:reddit/constants.dart';
-
 
 class WelcomeScreen extends StatelessWidget {
   const WelcomeScreen({Key? key}) : super(key: key);
@@ -44,7 +41,7 @@ class WelcomeScreen extends StatelessWidget {
             ),
             RoundedButton(
               text: "SIGN UP",
-              color: kPrimaryLightColor,
+              color: Colors.blue,
               textColor: Colors.black,
               press: () {
                 Navigator.push(
