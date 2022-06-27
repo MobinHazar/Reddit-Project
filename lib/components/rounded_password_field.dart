@@ -30,7 +30,8 @@ class _RoundedPasswordFieldState extends State<RoundedPasswordField> {
            color: Colors.yellow,
          ),
          suffixIcon: Icon(Icons.visibility,
-         color: Colors.yellow,),
+           color: Colors.yellow
+         ),
           border: InputBorder.none,
         ),
       ),
