@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:reddit/Screens/Setting/setting.dart';
 import 'package:reddit/Screens/Welcome/welcome_screen.dart';
 
 
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
           primaryColor: Colors.deepOrange,
           scaffoldBackgroundColor: Colors.red,
         ),
-        home: const WelcomeScreen(),
+        home:  Setting(),
     );
   }
 }

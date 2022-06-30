@@ -1,67 +1,82 @@
 import 'package:flutter/material.dart';
+import '../Login/login_screen.dart';
+import 'Saved_page.dart';
+import 'new_channel.dart';
 
-class  extends StatelessWidget {
-  const ({Key? key}) : super(key: key);
+class  Setting extends StatelessWidget {
+  const Setting ({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
 
-    return Column(
-    children: [
-      Container(
-        child: Text('Profile'),
-        onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) {
-                return const Profile_Screen();
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar:AppBar( backgroundColor: Colors.red,
+        foregroundColor: Colors.yellowAccent,
+        title: const Text("Settings", style: TextStyle(color: Colors.white),),
+      ),
+      body:Column(
+      children: [
+          Container(
+            margin: const EdgeInsets.only(top: 10),
+            padding: const EdgeInsets.only(bottom: 5),
+            height: 60,
+            width: 400,
+            child: ElevatedButton(
+              child: const Text('Profile'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return const LoginScreen();
+                    },
+                  ),
+                );
               },
             ),
-          );
-        },
-      ),
-      Container(
-        child: Text('Channel'),
-        onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) {
-                return const Channel_Screen();
-              },
-            ),
-          );
-        },
-      ),
-      Container(
-        child: Text('Saved Posts'),
-        onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) {
-                return const SavePosts_Screen();
-              },
-            ),
-          );
-        },
-      ),
-      Container(
-        child: Text('About us'),
-        onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) {
-                return const AboutUs_Screen();
-              },
-            ),
-          );
-        },
-      ),
-    ],
-
+          ),
+        Container(
+          padding: const EdgeInsets.only(bottom: 5),
+          height: 60,
+          width: 400,
+          child: ElevatedButton(
+            child: const Text('Saved Posts'),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return const SavedPage();
+                  },
+                ),
+              );
+            },
+          ),
+        ),
+        Container(
+          padding: const EdgeInsets.only(bottom: 5),
+          height: 60,
+          width: 400,
+          child: ElevatedButton(
+            child: const Text('New Channel'),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return const NewChannel();
+                  },
+                ),
+              );
+            },
+          ),
+        ),
+      ],
+    ),
     );
   }
 }
+
+
+
