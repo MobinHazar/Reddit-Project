@@ -17,7 +17,7 @@ class _SavedPageState extends State<SavedPage> {
       AppBar(
         backgroundColor: Colors.grey,
         title: const Text("Saved Posts", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.black, ),),
-      ),
+        ),
       body: getBody(),
     );
   }
