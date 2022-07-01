@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:reddit/Screens/Setting/postList.dart';
-import 'package:social_ui_kit/data/post_json.dart';
-import 'package:social_ui_kit/theme/colors.dart';
 
 class SavedPage extends StatefulWidget {
   const SavedPage({Key? key}) : super(key: key);
@@ -14,20 +12,15 @@ class _SavedPageState extends State<SavedPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: white,
+      backgroundColor: Colors.white,
       appBar:
-      PreferredSize(child: getAppBar(), preferredSize: Size.fromHeight(0)),
+      AppBar(
+        backgroundColor: Colors.grey,
+        title: const Text("Saved Posts", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold, color: Colors.black, ),),
+      ),
       body: getBody(),
     );
   }
-
-  Widget getAppBar() {
-    return AppBar(
-      backgroundColor: white,
-      elevation: 0,
-    );
-  }
-
   Widget getBody() {
     var size = MediaQuery.of(context).size;
     return SingleChildScrollView(
@@ -38,10 +31,6 @@ class _SavedPageState extends State<SavedPage> {
           children: [
             const SizedBox(
               height: 20,
-            ),
-            const Text(
-              "Saved",
-              style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
             ),
             const SizedBox(
               height: 30,
@@ -56,7 +45,7 @@ class _SavedPageState extends State<SavedPage> {
                   decoration: BoxDecoration(
                       boxShadow: [
                         BoxShadow(
-                            color: grey.withOpacity(0.4),
+                            color: Colors.grey.withOpacity(0.4),
                             spreadRadius: 2,
                             blurRadius: 15,
                             offset: const Offset(0, 1))
